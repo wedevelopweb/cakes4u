@@ -155,10 +155,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const aboutImage = document.getElementById("about-image");
     if (aboutImage) {
         const founderImages = [
-            "images/47.jpeg",
+            // "images/47.jpeg",
             "images/48.jpeg",
             "images/49.JPEG",
-            "images/50.jpeg"
+            // "images/50.jpeg"
         ];
         let currentIndex = 0;
 
