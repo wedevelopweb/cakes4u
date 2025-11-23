@@ -134,7 +134,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const founderImages = [
             "images/47.jpeg",
             "images/48.jpeg",
-            "images/49.jpeg",
+            "images/49.JPEG",
             "images/50.jpeg"
         ];
         let currentIndex = 0;
