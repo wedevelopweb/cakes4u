@@ -163,15 +163,28 @@
     .hero-image {
         flex: 1;
         max-width: 600px;
+        width: 100%;
+        aspect-ratio: 1;
+        /* Makes it square */
         position: relative;
         animation: fadeInRight 1s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        /* Ensures images don't overflow */
     }
 
     .hero-cake-img {
         width: 100%;
-        height: auto;
-        object-fit: contain;
+        height: 100%;
+        object-fit: cover;
+        /* Changed from 'contain' to 'cover' - fills the square */
         filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.15));
+        transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+        transform: scale(1);
+        border-radius: 20px;
+        /* Rounded corners */
     }
 
     .hero-features {
@@ -1285,6 +1298,7 @@
         .hero-image {
             max-width: 100%;
             order: -1;
+            aspect-ratio: 1;
         }
 
         .hero-features {

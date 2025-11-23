@@ -128,6 +128,29 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
+    //Hero image rotation
+    const heroImage = document.querySelector(".hero-cake-img");
+    if (heroImage) {
+        const heroImages = [
+            "images/hero-img.jpg",
+            "images/hero-image-1.jpg",
+            "images/hero-image-2.jpg",
+            "images/hero-image-3.jpg",
+        ];
+        let heroIndex = 0;
+
+        setInterval(() => {
+            heroImage.style.opacity = 0;
+            heroImage.style.transform = "scale(0.95)";
+
+            setTimeout(() => {
+                heroIndex = (heroIndex + 1) % heroImages.length;
+                heroImage.src = heroImages[heroIndex];
+                heroImage.style.opacity = 1;
+                heroImage.style.transform = "scale(1)";
+            }, 1000);
+        }, 4000);
+    }
     // About image rotation
     const aboutImage = document.getElementById("about-image");
     if (aboutImage) {
